@@ -38,10 +38,11 @@ def transpose(matrix):
     for row in range(rows):
         for col in range(row+1, cols):
             matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
-        
+    return matrix
 
 matrix = [[5, 20, 3], [7, -10, 9], [1, -52, 6]]
 
 # printMat(matrix)
 # printUpperTriangle(matrix)
-printLowerTriangle(matrix)
+# printLowerTriangle(matrix)
+printMat(transpose(matrix))
