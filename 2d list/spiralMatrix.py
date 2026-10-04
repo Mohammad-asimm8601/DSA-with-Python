@@ -9,10 +9,29 @@ def spiralMatrix(mat):
 
     mat_list = []
 
-    # top
-    for j in range(c - 1):
-        mat_list.append(2)
-    top += 1
+    while top <= bottom and left <= right:
+
+        # top
+        for j in range(left, right + 1):
+            mat_list.append(mat[top][j])
+        top += 1
+
+        # right
+        for i in range(top, bottom + 1):
+            mat_list.append(mat[i][right])
+        right -= 1
+
+        # bottom
+        if top <= bottom:
+            for j in range(right, left - 1, -1):
+                mat_list.append(mat[bottom][j])
+            bottom -= 1
+
+        # left
+        if left <= right:
+            for i in range(bottom, top - 1, -1):
+                mat_list.append(mat[i][left])
+            left += 1
 
     return mat_list
 
@@ -27,4 +46,4 @@ matrix = [
 ]
 
 result = spiralMatrix(matrix)
-print(matrix)
+print(result)
