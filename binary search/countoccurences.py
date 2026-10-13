@@ -1,6 +1,5 @@
 def firstOccurrence(nums, target):
     n = len(nums)
-
     lo = 0
     hi = n-1
     first = -1
@@ -17,7 +16,6 @@ def firstOccurrence(nums, target):
 
 def lastOccurrence(nums, target):
     n = len(nums)
-
     lo = 0
     hi = n-1
     last = -1
