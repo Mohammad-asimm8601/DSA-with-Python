@@ -5,9 +5,6 @@ def convert2Binary(num):
         binary += str(rem)
         num = num//2
 
-    i = 0
-    j = len(binary)-1
-
     binary = binary[::-1]
 
     return binary
