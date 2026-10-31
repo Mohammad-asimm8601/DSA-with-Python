@@ -1,13 +1,9 @@
 def checkIthBitSetOrNot(n, i):
-    result = ""
-    while n != 0:
-        result += str(n%2)
-        n = n//2
-    result = result[::-1]
-    result = result 
-    return result
+    if (n & (1 << i)) != 0:
+        return True
+    return False
 
 n = 13
-i = 1
+i = 2
 result = checkIthBitSetOrNot(n, i)
 print(result)
