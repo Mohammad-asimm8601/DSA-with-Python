@@ -1,9 +1,11 @@
 def printAllSubsets(nums):
-    for i in range(len(nums)):
-        
-        for j in range(i):
-            temp.append(nums[j])
-            print(temp, end=" ")
+    n = len(nums)
+    for i in range(2**n):
+        temp = []
+        for j in range(n):
+            if i & (1 << j):
+                temp.append(nums[j])
+        print(temp, end=" ")
 
 nums = [1, 2, 3]
 printAllSubsets(nums)
